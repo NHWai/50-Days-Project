@@ -1,0 +1,9 @@
+flex properties....default value is 0.5
+transition...flex duration effect
+
+opacity
+
+.panel.active (using two classes in css)
+
+JavaScript
+high order array method.....forEach method...which take in functions as arguments
