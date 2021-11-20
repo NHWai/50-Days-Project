@@ -1,0 +1,84 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap");
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Roboto", sans-serif;
+  margin: 0;
+  height: 100vh;
+  overflow: hidden;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.toggle-container {
+  display: flex;
+  align-items: center;
+  width: 200px;
+  margin: 10px 0;
+}
+
+.toggle {
+  visibility: hidden;
+}
+
+.label {
+  position: relative;
+  cursor: pointer;
+  background-color: #d0d0d0;
+  width: 80px;
+  height: 40px;
+  border-radius: 50px;
+  margin: 0 15px 0;
+  display: inline-block;
+}
+
+.toggle:checked + .label {
+  background-color: #8e44ad;
+}
+
+.round {
+  background-color: #fff;
+  border-radius: 50%;
+  width: 34px;
+  height: 34px;
+  position: absolute;
+  top: 3px;
+  left: 3px;
+  align-items: center;
+  justify-content: center;
+  animation: slideoff 0.3s linear forwards;
+}
+
+.toggle:checked + .label .round {
+  animation: slideon 0.3s linear forwards;
+}
+
+@keyframes slideon {
+  0% {
+    transform: translateX(0) scale(1);
+  }
+  50% {
+    transform: translateX(20px) scale(1.2);
+  }
+  100% {
+    transform: translateX(40px) scale(1);
+  }
+}
+
+@keyframes slideoff {
+  0% {
+    transform: translateX(40px) scale(1);
+  }
+  50% {
+    transform: translateX(20px) scale(1.2);
+  }
+  100% {
+    transform: translateX(0) scale(1);
+  }
+}
